@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+:root {
+  --bg-color: #030305;
+  --accent-cyan: #22d3ee;
+  --accent-red: #e11d48;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: #f3f4f6;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  /* Smooth scroll if user prefers */
+  scroll-behavior: smooth;
+}
+
+/* Subtle glowing blob animation */
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(1.1) translate(-20px, 20px);
+    opacity: 0.25;
+  }
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  animation: pulse-slow 12s ease-in-out infinite alternate;
+}
+
+.glow-orb-cyan {
+  background: var(--accent-cyan);
+}
+
+.glow-orb-red {
+  background: var(--accent-red);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Smooth gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #a5f3fc 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-red {
+  background: linear-gradient(135deg, #fda4af 0%, #e11d48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
