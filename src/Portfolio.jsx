@@ -223,7 +223,7 @@ function Portfolio() {
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden glass-panel p-2 transform transition-transform duration-700 hover:scale-[1.02]">
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#22d3ee]/20 to-[#e11d48]/20 blur-xl z-0"></div>
                 <img 
-                  src="/hero.png" 
+                  src={`${import.meta.env.BASE_URL}hero.png`} 
                   alt={PROFILE.name}
                   className="relative z-10 w-full h-full object-cover rounded-xl filter contrast-[1.05] brightness-95"
                   onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1544256718-3b6102377319?q=80&w=800&auto=format&fit=crop' }}
